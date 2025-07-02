@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function feedbacks()
+{
+    return $this->hasMany(HauraFeedback::class, 'id_user');
+}
 }
